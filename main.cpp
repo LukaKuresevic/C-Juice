@@ -1,13 +1,31 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int CN = 10, WN = 10, AN = 10;
+int CN = -1, WN = -1, AN = -1;
+ifstream creatures("creatures.txt"), weapon("weapon.txt"), additude("additude.txt");
 
 void Welcome()
 {
     cout << "------------------------------------------------" << endl;
     cout << "C - J U I C E" << endl;
     cout << "------------------------------------------------" << endl;
+
+    string as;
+
+    while(getline(creatures, as))
+    {
+        CN += 1;
+    }
+
+    while( getline(weapon, as))
+    {
+        WN += 1;
+    }
+
+    while(getline(additude, as))
+    {
+        AN += 1;
+    }
 }
 
 string MainMenu()
@@ -21,26 +39,27 @@ string MainMenu()
     string a;
     cin >> a;
     return a;
-
 }
 
 void CreateCharacter()
 {
-    ifstream creatures("creatures.txt"), weapon("weapon.txt"), additude("additude.txt");
-
     srand( (unsigned)time(NULL) );
     int m = rand() % 4, c = rand() % CN + 1, w = rand() % WN + 1, a = rand() % AN + 1;
 
     string cr, we, ad;
 
+    creatures.close(); creatures.open("creatures.txt");
     for(int i = 0; i < c; i++)
     {
         getline(creatures, cr);
     }
+
+    weapon.close(); weapon.open("weapon.txt");
     for(int i = 0; i < w; i++)
     {
         getline(weapon, we);
     }
+    additude.close(); additude.open("additude.txt");
     for(int i = 0; i < a; i++)
     {
         getline(additude, ad);
@@ -49,13 +68,22 @@ void CreateCharacter()
     cout << endl << "------------------------------------------------" << endl;
 
     if(m == 0)
+    {
+
         cout << "A " << ad << " " << cr << " who is wielding a " << we << endl;
+    }
     else if(m == 1)
+    {
         cout << "A " << we << " wielding " << cr << " who is " << ad << endl;
+    }
     else if(m == 2)
+    {
         cout << "A " << cr << " who is " << ad << " and has a " << we << endl;
+    }
     else
+    {
         cout << "A " << cr << " with a " << ad << " additude " << "with an " << we << endl;
+    }
 
     cout << "------------------------------------------------" << endl;
 
