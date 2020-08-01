@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int CN = -1, WN = -1, AN = -1;
+int CN = -1, WN = -1, AN = -1; //CN - number of lines in creatures.txt, etc.
 ifstream creatures("creatures.txt"), weapon("weapon.txt"), additude("additude.txt");
 
 void Welcome()
