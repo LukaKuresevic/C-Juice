@@ -1,0 +1,10 @@
+pig
+chicken
+crocodile
+bear
+dragon
+human
+dwarf
+armadillo
+mage
+priest

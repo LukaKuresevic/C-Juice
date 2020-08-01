@@ -1,0 +1,10 @@
+axe
+sword
+spear
+pike
+spearsword
+mace
+wand
+book
+whip
+halberdier

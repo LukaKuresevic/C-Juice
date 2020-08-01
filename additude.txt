@@ -1,0 +1,10 @@
+happy
+angry
+furious
+sad
+confused
+delighted
+surprised
+afraid
+calm
+proud
