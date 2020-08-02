@@ -69,7 +69,6 @@ void CreateCharacter()
 
     if(m == 0)
     {
-
         cout << "A " << ad << " " << cr << " who is wielding a " << we << endl;
     }
     else if(m == 1)
