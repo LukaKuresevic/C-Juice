@@ -1,2 +1,2 @@
 # C-Juice
-A randomised description creator, to be used for creating characters, game mechanics, etc.
+A randomized description generator, to be used for creating characters, game mechanics, etc.
