@@ -27,7 +27,7 @@
 *.lib
 
 # Code Blocks
-*.cpb
+*.cbp
 *.depend
 *.layout
 
