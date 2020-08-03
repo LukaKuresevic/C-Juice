@@ -2,12 +2,12 @@
 
 using namespace std;
 int CN = -1, WN = -1, AN = -1; //CN - number of lines in creatures.txt, etc.
-ifstream creatures("creatures.txt"), weapon("weapon.txt"), additude("additude.txt");
+ifstream creatures("ch_creatures.txt"), weapons("ch_weapons.txt"), attributes("ch_attributes.txt");
 
 void Welcome()
 {
     cout << "------------------------------------------------" << endl;
-    cout << "C - J U I C E" << endl;
+    cout << "R a n d e g" << endl;
     cout << "------------------------------------------------" << endl;
 
     string as;
@@ -17,12 +17,12 @@ void Welcome()
         CN += 1;
     }
 
-    while( getline(weapon, as))
+    while( getline(weapons, as))
     {
         WN += 1;
     }
 
-    while(getline(additude, as))
+    while(getline(attributes, as))
     {
         AN += 1;
     }
@@ -48,21 +48,21 @@ void CreateCharacter()
 
     string cr, we, ad;
 
-    creatures.close(); creatures.open("creatures.txt");
+    creatures.close(); creatures.open("ch_creatures.txt");
     for(int i = 0; i < c; i++)
     {
         getline(creatures, cr);
     }
 
-    weapon.close(); weapon.open("weapon.txt");
+    weapons.close(); weapons.open("ch_weapons.txt");
     for(int i = 0; i < w; i++)
     {
-        getline(weapon, we);
+        getline(weapons, we);
     }
-    additude.close(); additude.open("additude.txt");
+    attributes.close(); attributes.open("ch_attributes.txt");
     for(int i = 0; i < a; i++)
     {
-        getline(additude, ad);
+        getline(attributes, ad);
     }
 
     cout << endl << "------------------------------------------------" << endl;
